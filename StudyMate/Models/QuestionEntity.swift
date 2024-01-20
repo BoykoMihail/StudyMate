@@ -7,22 +7,56 @@
 
 import CoreData
 
-public class QuestionEntity: NSManagedObject, Identifiable {
-    @NSManaged public var question: String?
+@objc(QuestionEntity)
+public class QuestionEntity: NSManagedObject {
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<QuestionEntity> {
+        return NSFetchRequest<QuestionEntity>(entityName: "QuestionEntity")
+    }
+
     @NSManaged public var answer: String?
+    @NSManaged public var createAt: Date
+    @NSManaged public var id: UUID
     @NSManaged public var numberOfAttempts: Int16
     @NSManaged public var numberOfCorrectAnswers: Int16
-    @NSManaged public var id: UUID?
-    @NSManaged public var createAt: Date?
+    @NSManaged public var question: String
+    @NSManaged public var module: ModuleEntity?
+    
+    public convenience init(context: NSManagedObjectContext, question: String, module: ModuleEntity? = nil) {
+        let entity = NSEntityDescription.entity(forEntityName: "QuestionEntity", in: context)!
+        self.init(entity: entity, insertInto: context)
+        self.id = UUID()
+        self.createAt = Date()
+        self.question = question
+        self.module = module
+    }
+    
+    public convenience init(context: NSManagedObjectContext) {
+        let entity = NSEntityDescription.entity(forEntityName: "QuestionEntity", in: context)!
+        self.init(entity: entity, insertInto: context)
+        self.id = UUID()
+        self.createAt = Date()
+        self.question = "Question Title"
+        self.module = nil
+    }
 }
 
-//import CoreData
-//
-//extension QuestionEntity {
-//    
-//    public override func awakeFromInsert() {
-//        super.awakeFromInsert()
-//        self.id = UUID()
-//        self.createdAt = Date()
-//    }
-//}
+extension QuestionEntity {
+    func updateProperties(question: String? = nil, answer: String? = nil, numberOfAttempts: Int16? = nil, numberOfCorrectAnswers: Int16? = nil) {
+        if let newQuestion = question {
+            self.question = newQuestion
+        }
+        
+        if let newAnswer = answer {
+            self.answer = newAnswer
+        }
+        
+        if let newAttempts = numberOfAttempts {
+            self.numberOfAttempts = newAttempts
+        }
+        
+        if let newCorrectAnswers = numberOfCorrectAnswers {
+            self.numberOfCorrectAnswers = newCorrectAnswers
+        }
+    }
+}

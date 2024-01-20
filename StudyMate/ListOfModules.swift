@@ -13,7 +13,7 @@ struct ListOfModules: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.modules) { item in
+                ForEach(viewModel.modules, id: \.self) { item in
                     NavigationLink {
                         Text("Item at \(item.name)")
                     } label: {
@@ -45,6 +45,7 @@ struct ListOfModules: View {
 
     private func addItem() {
         viewModel.addModule(name: "Module")
+        viewModel.fetchModules()
     }
 }
 

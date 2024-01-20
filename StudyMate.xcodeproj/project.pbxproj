@@ -18,6 +18,7 @@
 		C706F6662B589FDE00D814FC /* ModuleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6652B589FDE00D814FC /* ModuleEntity.swift */; };
 		C706F6682B58A00B00D814FC /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6672B58A00B00D814FC /* QuestionEntity.swift */; };
 		C706F66B2B58A05E00D814FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F66A2B58A05E00D814FC /* CoreDataStack.swift */; };
+		C7A9FC562B59F09700464EEB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7A9FC542B59F09700464EEB /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		C706F6652B589FDE00D814FC /* ModuleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleEntity.swift; sourceTree = "<group>"; };
 		C706F6672B58A00B00D814FC /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
 		C706F66A2B58A05E00D814FC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C7A9FC552B59F09700464EEB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		C706F6162B58944E00D814FC = {
 			isa = PBXGroup;
 			children = (
+				C7A9FC542B59F09700464EEB /* Model.xcdatamodeld */,
 				C706F6212B58944E00D814FC /* StudyMate */,
 				C706F6372B58947600D814FC /* StudyMateTests */,
 				C706F6412B58947600D814FC /* StudyMateUITests */,
@@ -296,6 +299,7 @@
 				C706F66B2B58A05E00D814FC /* CoreDataStack.swift in Sources */,
 				C706F6252B58944E00D814FC /* ListOfModules.swift in Sources */,
 				C706F6662B589FDE00D814FC /* ModuleEntity.swift in Sources */,
+				C7A9FC562B59F09700464EEB /* Model.xcdatamodeld in Sources */,
 				C706F65B2B589E8A00D814FC /* ListOfModulesViewModel.swift in Sources */,
 				C706F6232B58944E00D814FC /* StudyMateApp.swift in Sources */,
 				C706F6682B58A00B00D814FC /* QuestionEntity.swift in Sources */,
@@ -628,6 +632,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C7A9FC542B59F09700464EEB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C7A9FC552B59F09700464EEB /* Model.xcdatamodel */,
+			);
+			currentVersion = C7A9FC552B59F09700464EEB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C706F6172B58944E00D814FC /* Project object */;
 }
