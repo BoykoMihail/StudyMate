@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70202822B5C190400D595DA /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70202812B5C190400D595DA /* Module.swift */; };
 		C706F6232B58944E00D814FC /* StudyMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6222B58944E00D814FC /* StudyMateApp.swift */; };
 		C706F6252B58944E00D814FC /* ListOfModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6242B58944E00D814FC /* ListOfModules.swift */; };
 		C706F6272B58947500D814FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C706F6262B58947500D814FC /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		C706F6662B589FDE00D814FC /* ModuleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6652B589FDE00D814FC /* ModuleEntity.swift */; };
 		C706F6682B58A00B00D814FC /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6672B58A00B00D814FC /* QuestionEntity.swift */; };
 		C706F66B2B58A05E00D814FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F66A2B58A05E00D814FC /* CoreDataStack.swift */; };
+		C76C8ACE2B61DEB9000DA54A /* ModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C8ACD2B61DEB8000DA54A /* ModuleViewModel.swift */; };
 		C7A9FC562B59F09700464EEB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7A9FC542B59F09700464EEB /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C70202812B5C190400D595DA /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		C706F61F2B58944E00D814FC /* StudyMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C706F6222B58944E00D814FC /* StudyMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyMateApp.swift; sourceTree = "<group>"; };
 		C706F6242B58944E00D814FC /* ListOfModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfModules.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		C706F6652B589FDE00D814FC /* ModuleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleEntity.swift; sourceTree = "<group>"; };
 		C706F6672B58A00B00D814FC /* QuestionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
 		C706F66A2B58A05E00D814FC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C76C8ACD2B61DEB8000DA54A /* ModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleViewModel.swift; sourceTree = "<group>"; };
 		C7A9FC552B59F09700464EEB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,11 +109,11 @@
 		C706F6212B58944E00D814FC /* StudyMate */ = {
 			isa = PBXGroup;
 			children = (
+				C76C8ACC2B61DEA6000DA54A /* Module */,
 				C706F6692B58A05400D814FC /* Services */,
 				C706F6642B589FC500D814FC /* Models */,
 				C706F6592B589E6A00D814FC /* ListOfModules */,
 				C706F6222B58944E00D814FC /* StudyMateApp.swift */,
-				C706F6242B58944E00D814FC /* ListOfModules.swift */,
 				C706F6262B58947500D814FC /* Assets.xcassets */,
 				C706F6282B58947500D814FC /* Preview Content */,
 			);
@@ -144,6 +148,7 @@
 		C706F6592B589E6A00D814FC /* ListOfModules */ = {
 			isa = PBXGroup;
 			children = (
+				C706F6242B58944E00D814FC /* ListOfModules.swift */,
 				C706F65A2B589E8A00D814FC /* ListOfModulesViewModel.swift */,
 			);
 			path = ListOfModules;
@@ -164,6 +169,15 @@
 				C706F66A2B58A05E00D814FC /* CoreDataStack.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C76C8ACC2B61DEA6000DA54A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C70202812B5C190400D595DA /* Module.swift */,
+				C76C8ACD2B61DEB8000DA54A /* ModuleViewModel.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +314,9 @@
 				C706F6252B58944E00D814FC /* ListOfModules.swift in Sources */,
 				C706F6662B589FDE00D814FC /* ModuleEntity.swift in Sources */,
 				C7A9FC562B59F09700464EEB /* Model.xcdatamodeld in Sources */,
+				C76C8ACE2B61DEB9000DA54A /* ModuleViewModel.swift in Sources */,
 				C706F65B2B589E8A00D814FC /* ListOfModulesViewModel.swift in Sources */,
+				C70202822B5C190400D595DA /* Module.swift in Sources */,
 				C706F6232B58944E00D814FC /* StudyMateApp.swift in Sources */,
 				C706F6682B58A00B00D814FC /* QuestionEntity.swift in Sources */,
 			);

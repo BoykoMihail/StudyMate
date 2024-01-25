@@ -15,7 +15,7 @@ struct ListOfModules: View {
             List {
                 ForEach(viewModel.modules, id: \.self) { item in
                     NavigationLink {
-                        Text("Item at \(item.name)")
+                        Module(viewModel: ModuleViewModel(module: item))
                     } label: {
                         Text(item.name)
                     }

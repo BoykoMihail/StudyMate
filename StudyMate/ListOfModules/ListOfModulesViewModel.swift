@@ -15,15 +15,6 @@ class QuestionViewModel: ObservableObject {
 
         do {
             let fetchedModules = try CoreDataStack.shared.context.fetch(fetchRequest)
-                debugPrint("BBoyko = ", type(of: fetchedModules))
-                if let modules = fetchedModules as? [ModuleEntity] {
-                    modules.forEach { element in
-                        debugPrint("BBoyko id = ", element.id)
-                        debugPrint("BBoyko name = ", element.name)
-                        debugPrint("BBoyko createAt = ", element.createAt)
-                        debugPrint("BBoyko questions = ", element.questions.count)
-                    }
-                }
                 self.modules = fetchedModules
         } catch {
             print("Error fetching modules: \(error.localizedDescription)")

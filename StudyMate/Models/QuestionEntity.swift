@@ -22,7 +22,10 @@ public class QuestionEntity: NSManagedObject {
     @NSManaged public var question: String
     @NSManaged public var module: ModuleEntity?
     
-    public convenience init(context: NSManagedObjectContext, question: String, module: ModuleEntity? = nil) {
+    public convenience init(context: NSManagedObjectContext, 
+                            question: String,
+                            answer: String? = nil,
+                            module: ModuleEntity? = nil) {
         let entity = NSEntityDescription.entity(forEntityName: "QuestionEntity", in: context)!
         self.init(entity: entity, insertInto: context)
         self.id = UUID()
